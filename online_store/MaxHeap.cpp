@@ -66,7 +66,27 @@ void maxheap::heapify_down(vector<product*> heap, int index){
 }
 
 
+void maxheap::delete_product(product* p){
 
+    int index = -1;
+
+    for (size_t i = 0; i < Popular_products.size(); i++) {
+        if (Popular_products[i]->getName() == p->getName()) {
+            index = i;
+            break;
+        }
+    }
+
+    if(index == -1){
+        return;
+        // not found
+    }
+
+    std::swap(Popular_products[index],Popular_products.back());
+
+    heapify_down(Popular_products, index);
+    maxHeapify(index);
+}
 
 
 

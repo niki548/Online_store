@@ -22,6 +22,8 @@ public:
     void print_Popular_products();
 
     void heapify_down(vector<product*> heap, int index);
+
+    void delete_product(product* p);
 };
 
 #endif // MAXHEAP_H
