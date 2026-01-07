@@ -1,6 +1,6 @@
 #include "Product.h"
 
-product::product(string name, int stock, int price, int salenumber) {
+product::product(string name, int stock, int price, int salenumber = 0) {
 
     this->name = name;
     this->stock = stock;
