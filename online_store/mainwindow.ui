@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>add product</string>
+     <string>add the product</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_2">
@@ -37,7 +37,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>حذف کالا</string>
+     <string>Remove the product</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_3">
@@ -50,7 +50,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>جستو جو</string>
+     <string>Product search</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_4">
@@ -63,7 +63,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>فیلتر کالاها</string>
+     <string>Product filter</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_5">
@@ -76,7 +76,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>موجودی انبار</string>
+     <string>warehouse stock</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_6">
@@ -89,7 +89,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>ثبت سفارش</string>
+     <string>order registration</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_7">
@@ -102,7 +102,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>پردازش سفارش</string>
+     <string>Order processing</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_8">
@@ -115,7 +115,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>نمایش کالاهای محبوب</string>
+     <string>Popular product</string>
     </property>
    </widget>
   </widget>

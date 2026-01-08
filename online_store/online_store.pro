@@ -17,8 +17,16 @@ SOURCES += \
     Product.cpp \
     Queue.cpp \
     Warehouse.cpp \
+    add_product.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    order_processing.cpp \
+    order_registration.cpp \
+    popular_product.cpp \
+    price_filter.cpp \
+    remove_product.cpp \
+    search_product.cpp \
+    warehouse_stock.cpp
 
 HEADERS += \
     Admin.h \
@@ -29,10 +37,26 @@ HEADERS += \
     Product.h \
     Queue.h \
     Warehouse.h \
-    mainwindow.h
+    add_product.h \
+    mainwindow.h \
+    order_processing.h \
+    order_registration.h \
+    popular_product.h \
+    price_filter.h \
+    remove_product.h \
+    search_product.h \
+    warehouse_stock.h
 
 FORMS += \
-    mainwindow.ui
+    add_product.ui \
+    mainwindow.ui \
+    order_processing.ui \
+    order_registration.ui \
+    popular_product.ui \
+    price_filter.ui \
+    remove_product.ui \
+    search_product.ui \
+    warehouse_stock.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
