@@ -15,6 +15,9 @@ public:
     explicit add_product(QWidget *parent = nullptr);
     ~add_product();
 
+private slots:
+    void on_pushButton_clicked();
+
 private:
     Ui::add_product *ui;
 };

@@ -26,4 +26,6 @@ public:
     void delete_product(product* p);
 };
 
+maxheap omaxheap;
+
 #endif // MAXHEAP_H

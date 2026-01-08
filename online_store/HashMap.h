@@ -34,4 +34,6 @@ public:
     int hash(std::string name);
 };
 
+hashmap ohashmap;
+
 #endif // HASHMAP_H

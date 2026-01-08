@@ -18,6 +18,7 @@ SOURCES += \
     Queue.cpp \
     Warehouse.cpp \
     add_product.cpp \
+    login_page.cpp \
     main.cpp \
     mainwindow.cpp \
     order_processing.cpp \
@@ -38,6 +39,7 @@ HEADERS += \
     Queue.h \
     Warehouse.h \
     add_product.h \
+    login_page.h \
     mainwindow.h \
     order_processing.h \
     order_registration.h \
@@ -49,6 +51,7 @@ HEADERS += \
 
 FORMS += \
     add_product.ui \
+    login_page.ui \
     mainwindow.ui \
     order_processing.ui \
     order_registration.ui \

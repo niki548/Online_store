@@ -7,6 +7,7 @@
 
 #include <Product.h>
 
+
 class Node{
 public:
     product* pro;
@@ -37,5 +38,7 @@ public:
 
     Node* bst_Minimum(Node* node);
 };
+
+ bst obst;
 
 #endif // BST_H
