@@ -22,18 +22,21 @@ class hashmap
 private:
     int tablesize;
     HNode** hash_list;
+    static hashmap* ohashmap;
 public:
     hashmap();
 
-    void search_map(product* p);
+    product* search_map(std::string name);
 
     void set_map(product *p);
 
     void delete_map(product *p);
 
     int hash(std::string name);
+
+    static hashmap* gethash();
 };
 
-hashmap ohashmap;
+
 
 #endif // HASHMAP_H

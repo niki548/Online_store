@@ -15,6 +15,9 @@ public:
     explicit remove_product(QWidget *parent = nullptr);
     ~remove_product();
 
+private slots:
+    void on_pushButton_clicked();
+
 private:
     Ui::remove_product *ui;
 };

@@ -48,7 +48,11 @@ void admin::add_product_to_warehouse(product* p){
     w->add_product(p);
 }
 
+void admin::delete_product_from_warehouse(product* p){
 
+    warehouse* w = warehouse::getwarehouse();
+    w->delete_product(p);
+}
 
 
 

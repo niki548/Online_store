@@ -15,6 +15,9 @@ public:
     explicit search_product(QWidget *parent = nullptr);
     ~search_product();
 
+private slots:
+    void on_toolButton_clicked();
+
 private:
     Ui::search_product *ui;
 };

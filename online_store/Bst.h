@@ -25,6 +25,7 @@ class bst
 {
 private:
     Node* root;
+    static bst* obst;
 public:
     bst();
 
@@ -36,9 +37,11 @@ public:
 
     void printInRnge(Node* node, int min, int max);
 
+    static bst* getbst();
+
     Node* bst_Minimum(Node* node);
 };
 
- bst obst;
+
 
 #endif // BST_H

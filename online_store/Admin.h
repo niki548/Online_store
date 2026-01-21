@@ -8,6 +8,7 @@
 using namespace std;
 
 #include "Warehouse.h"
+#include <vector>
 
 class admin
 {
@@ -29,6 +30,9 @@ public:
 
     //admin function
     void add_product_to_warehouse(product* p);
+    void delete_product_from_warehouse(product* p);
 };
+
+vector<product*> product_list;
 
 #endif // ADMIN_H

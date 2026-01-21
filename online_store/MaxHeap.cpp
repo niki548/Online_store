@@ -1,6 +1,8 @@
 #include "MaxHeap.h"
 #include <iostream>
 
+maxheap* maxheap::omaxheap = new maxheap();
+
 maxheap::maxheap() {}
 
 void maxheap::insert(product* p){
@@ -89,7 +91,9 @@ void maxheap::delete_product(product* p){
 }
 
 
-
+maxheap* maxheap::getmaxheap(){
+    return omaxheap;
+}
 
 
 

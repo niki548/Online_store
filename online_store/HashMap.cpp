@@ -2,6 +2,8 @@
 #include <iostream>
 using namespace std;
 
+hashmap* hashmap::ohashmap = new hashmap();
+
 hashmap::hashmap() {
     tablesize = 101;
     hash_list = new HNode*[tablesize];
@@ -59,27 +61,28 @@ void hashmap::delete_map(product* p){
     }
 }
 
-void hashmap::search_map(product* p){
+product* hashmap::search_map(std::string name){
 
-    int hn = hash(p->getName());
+    int hn = hash(name);
 
     HNode* newnode = hash_list[hn];
 
-    while(newnode != nullptr && newnode->p->getName() != p->getName()){
+    while(newnode != nullptr && newnode->p->getName() != name){
         newnode->next;
     }
 
     if(newnode == nullptr){
         //not found
-        return;
+        return nullptr;
     }
     else{
-        cout << newnode->p->getStock();
+        return newnode->p;
     }
 }
 
-
-
+hashmap* hashmap::gethash(){
+    return ohashmap;
+}
 
 
 

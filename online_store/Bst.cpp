@@ -1,6 +1,8 @@
 #include "Bst.h"
 #include <iostream>
 
+bst* bst::obst = new bst();
+
 bst::bst() { this->root = nullptr; }
 
 void bst::insert_bst(product* p){
@@ -108,7 +110,9 @@ void bst::printInRnge(Node* node,int min, int max){
 
 }
 
-
+bst* bst::getbst(){
+    return obst;
+}
 
 
 

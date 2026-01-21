@@ -12,6 +12,7 @@ class maxheap
 {
 private:
     vector<product*> Popular_products;
+    static maxheap* omaxheap;
 public:
     maxheap();
 
@@ -24,8 +25,10 @@ public:
     void heapify_down(vector<product*> heap, int index);
 
     void delete_product(product* p);
+
+    static maxheap* getmaxheap();
 };
 
-maxheap omaxheap;
+
 
 #endif // MAXHEAP_H
