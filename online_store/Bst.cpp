@@ -1,5 +1,4 @@
 #include "Bst.h"
-#include <iostream>
 
 bst* bst::obst = new bst();
 
@@ -101,7 +100,7 @@ void bst::printInRnge(Node* node,int min, int max){
     }
 
     if(node->pro->getPrice() >= min && node->pro->getPrice() <= max){
-        std::cout << node->pro->getName();
+        filter_list.push_back(node);
     }
 
     if(node->pro->getPrice() < max){
@@ -114,8 +113,15 @@ bst* bst::getbst(){
     return obst;
 }
 
+Node* bst::bst_maximum(Node* node){
 
+    while(node->right != nullptr){
+        node = node->right;
+    }
+    return node;
+}
 
+Node* bst::getroot(){ return this->root; }
 
 
 

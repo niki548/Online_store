@@ -15,6 +15,9 @@ public:
     explicit price_filter(QWidget *parent = nullptr);
     ~price_filter();
 
+private slots:
+    void on_pushButton_clicked();
+
 private:
     Ui::price_filter *ui;
 };

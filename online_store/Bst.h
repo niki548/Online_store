@@ -37,11 +37,16 @@ public:
 
     void printInRnge(Node* node, int min, int max);
 
-    static bst* getbst();
+    Node* bst_maximum(Node* node);
 
     Node* bst_Minimum(Node* node);
+
+    static bst* getbst();
+
+    Node* getroot();
+
 };
 
-
+vector<Node*> filter_list;
 
 #endif // BST_H

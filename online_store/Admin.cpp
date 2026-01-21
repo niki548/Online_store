@@ -60,4 +60,4 @@ void admin::delete_product_from_warehouse(product* p){
 
 
 
-//admin function
+
