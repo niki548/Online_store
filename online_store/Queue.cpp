@@ -1,5 +1,7 @@
 #include "Queue.h"
 
+queue* queue::oqueue = new queue;
+
 queue::queue() {
 }
 
@@ -20,9 +22,16 @@ void queue::dequeue(){
     if(list.empty()){
         return;
     }
-    else{
-        list.erase(list.begin());
+
+    order* finishedOrder = list.front();
+    delete finishedOrder;
+
+    list.erase(list.begin());
+
+    if (!list.empty()) {
         list[0]->setstate("Preparing");
     }
 
 }
+
+queue* queue::get_queue(){ return oqueue; }

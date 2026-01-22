@@ -1,4 +1,5 @@
 #include "Admin.h"
+#include "Queue.h"
 
 admin* admin::newadmin = nullptr;
 
@@ -54,10 +55,14 @@ void admin::delete_product_from_warehouse(product* p){
     w->delete_product(p);
 }
 
+void admin::confirm_product(product* p){
 
+    int newStock = p->getStock() - 1;
+    p->setStock(newStock);
 
-
-
+    int newSalenumber = p->getSalenumber() + 1;
+    p->setSalanumber(newSalenumber);
+}
 
 
 

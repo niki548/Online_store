@@ -31,6 +31,8 @@ public:
     //admin function
     void add_product_to_warehouse(product* p);
     void delete_product_from_warehouse(product* p);
+    void confirm_product(product* p);
+
 };
 
 vector<product*> product_list;

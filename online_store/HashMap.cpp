@@ -85,5 +85,5 @@ hashmap* hashmap::gethash(){
 }
 
 
-
+HNode** hashmap::getHashList(){ return hash_list; }
 

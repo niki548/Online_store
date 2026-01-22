@@ -6,6 +6,8 @@ warehouse_stock::warehouse_stock(QWidget *parent)
     , ui(new Ui::warehouse_stock)
 {
     ui->setupUi(this);
+
+
 }
 
 warehouse_stock::~warehouse_stock()

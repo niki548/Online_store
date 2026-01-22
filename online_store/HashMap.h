@@ -35,6 +35,8 @@ public:
     int hash(std::string name);
 
     static hashmap* gethash();
+
+    HNode** getHashList();
 };
 
 

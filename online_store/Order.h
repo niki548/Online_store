@@ -13,11 +13,12 @@ static int key_order = 1;
 class order
 {
 private:
-    vector<product*> order_list;
     int key;
     string state;
 public:
-    order(vector<product*> list);
+    vector<product*> order_list;
+
+    order();
 
     void setkey(int key);
 
@@ -26,6 +27,7 @@ public:
     string getstate();
 
     int getkey();
+
 };
 
 #endif // ORDER_H

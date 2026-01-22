@@ -1,8 +1,7 @@
 #include "Order.h"
 
-order::order(vector<product*> list) {
+order::order() {
 
-    order_list = list;
     key = key_order++;
     state = "waiting";
 }

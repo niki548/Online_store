@@ -12,12 +12,15 @@ class queue
 {
 private:
     vector<order*> list;
+    static queue* oqueue;
 public:
     queue();
 
     void enqueue(order* order);
 
     void dequeue();
+
+    static queue* get_queue();
 };
 
 #endif // QUEUE_H
