@@ -21,6 +21,8 @@ public:
     void dequeue();
 
     static queue* get_queue();
+
+    vector<order*> getVector();
 };
 
 #endif // QUEUE_H

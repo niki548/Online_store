@@ -3,6 +3,7 @@
 queue* queue::oqueue = new queue;
 
 queue::queue() {
+
 }
 
 void queue::enqueue(order* order){
@@ -14,6 +15,7 @@ void queue::enqueue(order* order){
     }
 
     list.push_back(order);
+
 }
 
 void queue::dequeue(){
@@ -31,7 +33,8 @@ void queue::dequeue(){
     if (!list.empty()) {
         list[0]->setstate("Preparing");
     }
-
 }
 
 queue* queue::get_queue(){ return oqueue; }
+
+vector<order*> queue::getVector(){ return this->list; }

@@ -13,15 +13,20 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QTableWidget" name="order_table">
+  <widget class="QTreeWidget" name="order_tree">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>100</y>
-     <width>261</width>
-     <height>271</height>
+     <x>170</x>
+     <y>140</y>
+     <width>256</width>
+     <height>192</height>
     </rect>
    </property>
+   <column>
+    <property name="text">
+     <string notr="true">1</string>
+    </property>
+   </column>
   </widget>
  </widget>
  <resources/>

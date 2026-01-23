@@ -24,14 +24,15 @@ void maxheap::maxHeapify(int index){
     }
 }
 
-void maxheap::print_Popular_products(){
+vector<product*> maxheap::print_Popular_products(){
 
     vector<product*> tmp = Popular_products;
+    vector<product*> tmp1;
 
     while(!tmp.empty()){
 
         product* p = tmp[0];
-        std::cout << p->getSalenumber();
+       tmp1.push_back(p);
 
         tmp[0] = tmp.back();
         tmp.pop_back();
@@ -39,6 +40,7 @@ void maxheap::print_Popular_products(){
         heapify_down(tmp, 0);
     }
 
+    return tmp1;
 }
 
 void maxheap::heapify_down(vector<product*> heap, int index){
@@ -95,5 +97,28 @@ maxheap* maxheap::getmaxheap(){
     return omaxheap;
 }
 
+void maxheap::increase_key(product* p){
 
+    int index = -1;
 
+    for (size_t i = 0; i < Popular_products.size(); i++) {
+        if (Popular_products[i] == p) {
+            index = i;
+            break;
+        }
+    }
+
+    if (index == -1) return;
+
+    while (index > 0) {
+        int parent = (index - 1) / 2;
+
+        if (Popular_products[parent]->getSalenumber() >= Popular_products[index]->getSalenumber())
+            break;
+
+        swap(Popular_products[parent], Popular_products[index]);
+        index = parent;
+    }
+}
+
+vector<product*> maxheap::getList(){ return this->Popular_products; }

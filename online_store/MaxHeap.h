@@ -20,13 +20,17 @@ public:
 
     void maxHeapify(int index);
 
-    void print_Popular_products();
+    vector<product*> print_Popular_products();
 
     void heapify_down(vector<product*> heap, int index);
 
     void delete_product(product* p);
 
+    void increase_key(product* p);
+
     static maxheap* getmaxheap();
+
+    vector<product*> getList();
 };
 
 

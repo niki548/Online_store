@@ -1,5 +1,5 @@
 #include "Admin.h"
-#include "Queue.h"
+#include "MaxHeap.h"
 
 admin* admin::newadmin = nullptr;
 
@@ -62,6 +62,9 @@ void admin::confirm_product(product* p){
 
     int newSalenumber = p->getSalenumber() + 1;
     p->setSalanumber(newSalenumber);
+
+    maxheap* heap = maxheap::getmaxheap();
+    heap->increase_key(p);
 }
 
 
