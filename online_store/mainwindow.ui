@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>728</width>
     <height>600</height>
    </rect>
   </property>
@@ -27,7 +27,7 @@
      <string>add the product</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="remove_button">
     <property name="geometry">
      <rect>
       <x>80</x>
@@ -40,7 +40,7 @@
      <string>Remove the product</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="search_button">
     <property name="geometry">
      <rect>
       <x>80</x>
@@ -53,7 +53,7 @@
      <string>Product search</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="filter_button">
     <property name="geometry">
      <rect>
       <x>80</x>
@@ -66,7 +66,7 @@
      <string>Product filter</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_5">
+   <widget class="QPushButton" name="stock_button">
     <property name="geometry">
      <rect>
       <x>340</x>
@@ -79,7 +79,7 @@
      <string>warehouse stock</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_6">
+   <widget class="QPushButton" name="registration_button">
     <property name="geometry">
      <rect>
       <x>340</x>
@@ -92,7 +92,7 @@
      <string>order registration</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_7">
+   <widget class="QPushButton" name="processing_button">
     <property name="geometry">
      <rect>
       <x>340</x>
@@ -105,7 +105,7 @@
      <string>Order processing</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_8">
+   <widget class="QPushButton" name="popular_button">
     <property name="geometry">
      <rect>
       <x>340</x>
@@ -118,13 +118,26 @@
      <string>Popular product</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>450</y>
+      <width>90</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>logout</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>728</width>
      <height>25</height>
     </rect>
    </property>

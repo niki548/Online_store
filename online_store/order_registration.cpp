@@ -5,7 +5,7 @@
 #include "HashMap.h"
 #include "Queue.h"
 #include <QMessageBox>
-
+#include "mainwindow.h"
 
 
 order_registration::order_registration(QWidget *parent)
@@ -46,7 +46,11 @@ void order_registration::on_toolButton_clicked()
         return;
     }
 
-    neworder->order_list.push_back(p);
+    neworder->order_list.push_back(p->getName());
+    admin* a = admin::getadmin();
+    a->confirm_product(p);
+
+    QMessageBox::information(this, "Done", "add product to order successfully.");
 }
 
 
@@ -63,5 +67,13 @@ void order_registration::on_pushButton_2_clicked()
     QMessageBox::information(this, "Done", "Order registered successfully");
 
     neworder = new order;
+}
+
+
+void order_registration::on_toolButton_2_clicked()
+{
+    MainWindow* newpage = new MainWindow;
+    newpage->show();
+    this->close();
 }
 

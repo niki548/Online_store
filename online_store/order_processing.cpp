@@ -2,6 +2,7 @@
 #include "ui_order_processing.h"
 
 #include "Queue.h"
+#include "mainwindow.h"
 
 Order_processing::Order_processing(QWidget *parent)
     : QDialog(parent)
@@ -13,18 +14,21 @@ Order_processing::Order_processing(QWidget *parent)
 
     ui->order_tree->clear();
 
+    ui->order_tree->setColumnCount(2);
+    ui->order_tree->setHeaderLabels({"Orders", "State"});
+
     for(size_t i=0; i<q->getVector().size(); i++){
 
         QTreeWidgetItem* orderItem = new QTreeWidgetItem(ui->order_tree);
 
-        orderItem->setText(0, "Order #" + QString::number(q->getVector()[i]->getkey()));
+        orderItem->setText(0, "Order #" + QString::number(i));
         orderItem->setText(1, QString::fromStdString(q->getVector()[i]->getstate()));
 
-        for(size_t j=0; j<q->getVector()[i]->order_list.size(); i++){
+        for(size_t j=0; j<q->getVector()[i]->order_list.size(); j++){
 
-            product* p = q->getVector()[i]->order_list[j];
+            string name = q->getVector()[i]->order_list[j];
             QTreeWidgetItem* productItem = new QTreeWidgetItem(orderItem);
-            productItem->setText(0, QString::fromStdString(p->getName()));
+            productItem->setText(0, QString::fromStdString(name));
         }
     }
 
@@ -35,5 +39,13 @@ Order_processing::Order_processing(QWidget *parent)
 Order_processing::~Order_processing()
 {
     delete ui;
+}
+
+
+void Order_processing::on_toolButton_clicked()
+{
+    MainWindow* newpage = new MainWindow;
+    newpage->show();
+    this->close();
 }
 

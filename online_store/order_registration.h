@@ -21,6 +21,8 @@ private slots:
 
     void on_pushButton_2_clicked();
 
+    void on_toolButton_2_clicked();
+
 private:
     Ui::order_registration *ui;
     order* neworder;

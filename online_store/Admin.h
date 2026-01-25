@@ -7,8 +7,8 @@
 
 using namespace std;
 
-#include "Warehouse.h"
 #include <vector>
+#include "Product.h"
 
 class admin
 {
@@ -35,6 +35,6 @@ public:
 
 };
 
-vector<product*> product_list;
+extern vector<product*> product_list;
 
 #endif // ADMIN_H

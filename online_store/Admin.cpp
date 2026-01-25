@@ -1,7 +1,10 @@
 #include "Admin.h"
+#include "Warehouse.h"
 #include "MaxHeap.h"
 
 admin* admin::newadmin = nullptr;
+
+vector<product*> product_list;
 
 admin::admin(string u, string p) {
     this->username = u;

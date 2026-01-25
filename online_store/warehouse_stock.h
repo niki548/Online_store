@@ -15,6 +15,9 @@ public:
     explicit warehouse_stock(QWidget *parent = nullptr);
     ~warehouse_stock();
 
+private slots:
+    void on_toolButton_clicked();
+
 private:
     Ui::warehouse_stock *ui;
 };

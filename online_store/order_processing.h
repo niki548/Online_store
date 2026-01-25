@@ -15,6 +15,9 @@ public:
     explicit Order_processing(QWidget *parent = nullptr);
     ~Order_processing();
 
+private slots:
+    void on_toolButton_clicked();
+
 private:
     Ui::Order_processing *ui;
 };

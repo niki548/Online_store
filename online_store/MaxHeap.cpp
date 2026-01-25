@@ -1,5 +1,4 @@
 #include "MaxHeap.h"
-#include <iostream>
 
 maxheap* maxheap::omaxheap = new maxheap();
 
@@ -43,7 +42,7 @@ vector<product*> maxheap::print_Popular_products(){
     return tmp1;
 }
 
-void maxheap::heapify_down(vector<product*> heap, int index){
+void maxheap::heapify_down(vector<product*> &heap, int index){
 
     int size = heap.size();
 
@@ -53,10 +52,10 @@ void maxheap::heapify_down(vector<product*> heap, int index){
         int right = (index * 2) + 2;
         int largest = index;
 
-        if(left < size && heap[left]->getSalenumber() > heap[index]->getSalenumber()){
+        if(left < size && heap[left]->getSalenumber() > heap[largest]->getSalenumber()){
             largest = left;
         }
-        if(right < size && heap[right]->getSalenumber() > heap[index]->getSalenumber()){
+        if(right < size && heap[right]->getSalenumber() > heap[largest]->getSalenumber()){
             largest = right;
         }
 
@@ -87,9 +86,12 @@ void maxheap::delete_product(product* p){
     }
 
     std::swap(Popular_products[index],Popular_products.back());
+    Popular_products.pop_back();
 
-    heapify_down(Popular_products, index);
-    maxHeapify(index);
+    if (index < Popular_products.size()) {
+        heapify_down(Popular_products, index);
+        maxHeapify(index);
+    }
 }
 
 

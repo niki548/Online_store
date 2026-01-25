@@ -3,6 +3,8 @@
 #include <QString>
 
 #include "Admin.h"
+#include "mainwindow.h"
+#include <QMessageBox>
 
 add_product::add_product(QWidget *parent)
     : QDialog(parent)
@@ -27,5 +29,14 @@ void add_product::on_pushButton_clicked()
 
     newadmin->add_product_to_warehouse(p);
 
+    QMessageBox::information(this, "Done", "product add successfully.");
+}
+
+
+void add_product::on_toolButton_clicked()
+{
+    MainWindow* newpage = new MainWindow;
+    newpage->show();
+    this->close();
 }
 

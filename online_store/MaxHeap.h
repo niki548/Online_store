@@ -22,7 +22,7 @@ public:
 
     vector<product*> print_Popular_products();
 
-    void heapify_down(vector<product*> heap, int index);
+    void heapify_down(vector<product*> &heap, int index);
 
     void delete_product(product* p);
 

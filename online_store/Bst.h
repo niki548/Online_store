@@ -47,6 +47,6 @@ public:
 
 };
 
-vector<Node*> filter_list;
+extern vector<Node*> filter_list;
 
 #endif // BST_H

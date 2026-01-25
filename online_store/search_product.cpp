@@ -3,6 +3,7 @@
 
 #include "HashMap.h"
 #include <QString>
+#include "mainwindow.h"
 
 search_product::search_product(QWidget *parent)
     : QDialog(parent)
@@ -36,5 +37,13 @@ void search_product::on_toolButton_clicked()
         ui->stock->setText(QString::number(p->getStock()));
         ui->sale->setText(QString::number(p->getSalenumber()));
     }
+}
+
+
+void search_product::on_toolButton_2_clicked()
+{
+    MainWindow* newpage = new MainWindow;
+    newpage->show();
+    this->close();
 }
 

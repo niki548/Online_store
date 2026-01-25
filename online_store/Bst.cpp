@@ -2,6 +2,8 @@
 
 bst* bst::obst = new bst();
 
+vector<Node*> filter_list;
+
 bst::bst() { this->root = nullptr; }
 
 void bst::insert_bst(product* p){
@@ -64,6 +66,7 @@ void bst::delete_bst(product* p){
         y->left = pnode->left;
         y->left->parent = y;
     }
+    delete pnode;
 }
 
 Node* bst::bst_Minimum(Node* node){

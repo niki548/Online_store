@@ -3,6 +3,7 @@
 
 #include "Admin.h"
 #include "HashMap.h"
+#include "mainwindow.h"
 
 warehouse_stock::warehouse_stock(QWidget *parent)
     : QDialog(parent)
@@ -27,3 +28,11 @@ warehouse_stock::~warehouse_stock()
 {
     delete ui;
 }
+
+void warehouse_stock::on_toolButton_clicked()
+{
+    MainWindow* newpage = new MainWindow;
+    newpage->show();
+    this->close();
+}
+

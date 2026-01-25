@@ -18,6 +18,12 @@ public:
 private slots:
     void on_pushButton_clicked();
 
+    void on_toolButton_clicked();
+
+    void on_min_valueChanged(int value);
+
+    void on_max_valueChanged(int value);
+
 private:
     Ui::price_filter *ui;
 };

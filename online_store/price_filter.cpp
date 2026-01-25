@@ -2,6 +2,7 @@
 #include "ui_price_filter.h"
 #include "Admin.h"
 #include "Bst.h"
+#include "mainwindow.h"
 
 price_filter::price_filter(QWidget *parent)
     : QDialog(parent)
@@ -32,6 +33,9 @@ price_filter::price_filter(QWidget *parent)
 
     ui->min->setValue(min);
     ui->max->setValue(max);
+
+    ui->max_lable->setText(QString::number(ui->max->value()));
+    ui->min_lable->setText(QString::number(ui->min->value()));
 }
 
 price_filter::~price_filter()
@@ -60,5 +64,25 @@ void price_filter::on_pushButton_clicked()
 
     filter_list.clear();
     filter_list.shrink_to_fit();
+}
+
+
+void price_filter::on_toolButton_clicked()
+{
+    MainWindow* newpage = new MainWindow;
+    newpage->show();
+    this->close();
+}
+
+
+void price_filter::on_min_valueChanged(int value)
+{
+    ui->min_lable->setText(QString::number(value));
+}
+
+
+void price_filter::on_max_valueChanged(int value)
+{
+    ui->max_lable->setText(QString::number(value));
 }
 

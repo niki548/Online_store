@@ -2,7 +2,6 @@
 
 order::order() {
 
-    key = key_order++;
     state = "waiting";
 }
 
@@ -14,10 +13,3 @@ void order::setstate(string state){
     this->state = state;
 }
 
-int order::getkey(){
-    return key;
-}
-
-void order::setkey(int key){
-    this->key = key;
-}

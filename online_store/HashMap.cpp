@@ -1,5 +1,4 @@
 #include "HashMap.h"
-#include <iostream>
 using namespace std;
 
 hashmap* hashmap::ohashmap = new hashmap();
@@ -68,7 +67,7 @@ product* hashmap::search_map(std::string name){
     HNode* newnode = hash_list[hn];
 
     while(newnode != nullptr && newnode->p->getName() != name){
-        newnode->next;
+        newnode = newnode->next;
     }
 
     if(newnode == nullptr){

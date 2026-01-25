@@ -15,6 +15,9 @@ public:
     explicit Popular_product(QWidget *parent = nullptr);
     ~Popular_product();
 
+private slots:
+    void on_toolButton_clicked();
+
 private:
     Ui::Popular_product *ui;
 };
